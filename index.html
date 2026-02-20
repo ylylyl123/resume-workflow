@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume Workflow</title>
+  <style>
+    :root {
+      --bg: #f2f6ff;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --line: #dbe3f0;
+      --btn: #0f766e;
+      --btn-hover: #115e59;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+      color: var(--text);
+      background: radial-gradient(circle at 15% 15%, #dbeafe 0%, transparent 45%), var(--bg);
+    }
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 52px 20px 70px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 12px 30px rgba(30, 64, 175, 0.08);
+    }
+    h1 { margin: 0 0 10px; font-size: 32px; }
+    p { margin: 0 0 18px; color: var(--muted); line-height: 1.68; }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+    .chip {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 12px;
+      background: #f8fafc;
+      font-size: 13px;
+      color: #334155;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    a.btn {
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      background: var(--btn);
+      color: #fff;
+      padding: 11px 14px;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: background-color .2s ease;
+    }
+    a.btn:hover { background: var(--btn-hover); }
+    .links { display: flex; flex-wrap: wrap; gap: 9px 14px; font-size: 14px; margin-top: 8px; }
+    .links a { color: #0f172a; }
+    .note { margin-top: 16px; font-size: 13px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <h1>Resume Workflow</h1>
+      <p>中文简历自动化工作流：输入基础简历与岗位 JD，输出 LaTeX/PDF 简历、网页简历与岗位校准报告。</p>
+      <div class="chips">
+        <span class="chip">STAR + 量化改写</span>
+        <span class="chip">LaTeX PDF</span>
+        <span class="chip">HTML 简历</span>
+        <span class="chip">岗位校准报告</span>
+      </div>
+      <div class="grid">
+        <a class="btn" href="./中文简历技能/SKILL.md" target="_blank" rel="noopener">查看技能说明</a>
+        <a class="btn" href="./中文简历技能/脚本/生成简历流程.py" target="_blank" rel="noopener">查看主流程脚本</a>
+        <a class="btn" href="./中文简历技能/输出/最终版/中文简历网页.html" target="_blank" rel="noopener">查看示例网页简历</a>
+        <a class="btn" href="./中文简历技能/输出/最终版/中文简历.pdf" target="_blank" rel="noopener">查看示例 PDF 简历</a>
+      </div>
+      <div class="links">
+        <a href="./README.md" target="_blank" rel="noopener">README</a>
+        <a href="./中文简历技能/输出/最终版/岗位调研与简历校准报告.md" target="_blank" rel="noopener">示例校准报告</a>
+        <a href="./中文简历技能/参考/中文简历规则.md" target="_blank" rel="noopener">中文简历规则</a>
+      </div>
+      <div class="note">页面更新时间：2026-02-20</div>
+    </section>
+  </main>
+</body>
+</html>

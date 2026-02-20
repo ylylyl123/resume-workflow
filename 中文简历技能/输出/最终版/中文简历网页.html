@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>雷军（教学演示版） | 中文简历</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      color: #0f172a;
+      background-color: #fff;
+      font-family: Inter, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      line-height: 1.6;
+    }
+    section { padding: 4.5rem 1.2rem; }
+    .container { max-width: 1040px; margin: 0 auto; }
+    .grid { display: grid; gap: 1.5rem; }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    @media (max-width: 820px) { .grid-2 { grid-template-columns: 1fr; } }
+
+    #hero {
+      min-height: 72vh;
+      background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero-name { font-size: 2.8rem; margin-bottom: 0.6rem; }
+    .hero-title { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.8rem; }
+    .hero-info { color: #64748b; margin-bottom: 1rem; }
+    .hero-highlights { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.55rem; }
+    .highlight-tag {
+      border: 1px solid #e2e8f0;
+      background: #f8fafc;
+      border-radius: 9999px;
+      padding: 0.35rem 0.8rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.85rem;
+      margin-bottom: 2.2rem;
+      position: relative;
+    }
+    .section-title:after {
+      content: '';
+      display: block;
+      width: 62px;
+      height: 3px;
+      background: #0f172a;
+      margin: 0.9rem auto 0;
+    }
+
+    .experience-card, .project-card, .skill-category {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 1.35rem;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+      transition: all 0.2s ease;
+    }
+    .experience-card:hover, .project-card:hover, .skill-category:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+    }
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 0.7rem;
+    }
+    @media (max-width: 640px) { .experience-header { flex-direction: column; } }
+
+    .experience-company { font-size: 1.13rem; font-weight: 600; }
+    .experience-position { font-size: 0.98rem; font-weight: 500; margin-top: 0.35rem; }
+    .experience-date, .experience-sub { color: #64748b; font-size: 0.88rem; }
+    .experience-sub { margin-bottom: 0.7rem; }
+
+    .experience-highlights, .project-highlights { list-style: disc; padding-left: 1.2rem; }
+    .experience-highlights li, .project-highlights li { margin-bottom: 0.52rem; color: #334155; line-height: 1.72; }
+    .metric-row { margin-top: 0.35rem; display: flex; gap: 0.4rem; flex-wrap: wrap; }
+    .metric-pill {
+      border-radius: 9999px;
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 0.2rem 0.55rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .project-date { color: #64748b; font-size: 0.85rem; margin-bottom: 0.45rem; }
+    .project-title { font-size: 1.1rem; margin-bottom: 0.65rem; }
+
+    .skills-section { background: #f8fafc; }
+    .skills-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .category-title { margin-bottom: 0.7rem; font-size: 1.03rem; font-weight: 600; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+    .skill-tag {
+      display: inline-block;
+      border-radius: 9999px;
+      background: #eef2ff;
+      color: #0f172a;
+      padding: 0.35rem 0.65rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      border: 1px solid #dbeafe;
+    }
+
+    .footer-note {
+      text-align: center;
+      color: #64748b;
+      padding: 1.4rem 1rem 2.2rem;
+      font-size: 0.84rem;
+    }
+  </style>
+</head>
+<body>
+  <section id="hero">
+    <div class="container">
+      <h1 class="hero-name">雷军（教学演示版）</h1>
+      <p class="hero-title">意向岗位：券商金融管培生</p>
+      <p class="hero-info">电话：138-0000-0000 ｜ 邮箱：demo@example.com ｜ 地点：武汉</p>
+      <div class="hero-highlights"><span class="highlight-tag">跨部门协作</span><span class="highlight-tag">复盘优化</span><span class="highlight-tag">数据分析</span><span class="highlight-tag">项目管理</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">教育背景</h2>
+      
+            <div class="experience-card">
+              <div class="experience-header">
+                <div>
+                  <div class="experience-company">武汉大学</div>
+                  <div class="experience-position">计算机科学与工程</div>
+                </div>
+                <div class="experience-date">1987.09 - 1991.06</div>
+              </div>
+              <div class="experience-sub">本科（应届）</div>
+              <ul class="experience-highlights"><li>公开报道提及：2年修完本科全部学分</li><li>大学阶段形成技术实现与商业落地并重的实践导向</li></ul>
+            </div>
+            
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">实习/项目经历</h2>
+      
+            <div class="experience-card">
+              <div class="experience-header">
+                <div>
+                  <div class="experience-company">BITLOK 加密软件（校园商业化项目）</div>
+                  <div class="experience-position">联合开发者</div>
+                </div>
+                <div class="experience-date">1989.03 - 1990.12</div>
+              </div>
+              <div class="experience-sub">武汉</div>
+              <ul class="experience-highlights"><li><strong>协同推进：</strong>在有限资源下保证交付质量；拆分任务并进行每日进度同步，确保关键模块按期交付；高压环境下保持稳定产出<div class="metric-row"><span class="metric-pill">连续高强度推进</span><span class="metric-pill">关键节点无延期</span></div></li><li><strong>复盘优化：</strong>根据反馈快速迭代核心功能；围绕安装成本、易用性和稳定性持续优化，形成版本迭代机制；产品形成长期销售能力<div class="metric-row"><span class="metric-pill">持续销售约6-7年</span></div></li><li><strong>项目统筹：</strong>完成加密软件首版交付并验证商业可行性；与伙伴连续15天高强度开发与测试，搭建安装、加密、恢复的完整流程；项目实现从技术实现到商业化落地<div class="metric-row"><span class="metric-pill">15天完成首版开发</span><span class="metric-pill">单套定价2000元以上</span></div></li></ul>
+            </div>
+            
+            <div class="experience-card">
+              <div class="experience-header">
+                <div>
+                  <div class="experience-company">校园汉卡项目（失败复盘案例）</div>
+                  <div class="experience-position">项目负责人</div>
+                </div>
+                <div class="experience-date">1990.01 - 1990.10</div>
+              </div>
+              <div class="experience-sub">武汉</div>
+              <ul class="experience-highlights"><li><strong>复盘优化：</strong>快速止损并输出复盘结论；重新梳理需求验证、现金流和渠道策略，形成复盘文档；沉淀可复用的风险管理方法<div class="metric-row"><span class="metric-pill">完成一次完整失败复盘</span><span class="metric-pill">明确3条运营底线</span></div></li><li><strong>项目统筹：</strong>组织打样与首批备货并跑通销售；以借款启动项目并推进生产、库存和渠道动作；建立了从供给端到销售端的完整运营视角<div class="metric-row"><span class="metric-pill">借款14000元启动</span><span class="metric-pill">首批库存2000套</span></div></li></ul>
+            </div>
+            
+            <div class="experience-card">
+              <div class="experience-header">
+                <div>
+                  <div class="experience-company">高密度学习与自驱成长（大学阶段）</div>
+                  <div class="experience-position">学习项目执行者</div>
+                </div>
+                <div class="experience-date">1987.09 - 1989.09</div>
+              </div>
+              <div class="experience-sub">武汉</div>
+              <ul class="experience-highlights"><li><strong>复盘优化：</strong>建立科技创业导向的能力地图；通过系统阅读与实践，将长期目标拆解为阶段性任务；形成长期主义与结果导向的工作方法<div class="metric-row"><span class="metric-pill">持续多年自驱实践</span></div></li><li><strong>项目统筹：</strong>压缩学习周期并提升产出效率；制定高密度学习计划并在图书馆与机房长期执行；提前完成学业要求并转入实战阶段<div class="metric-row"><span class="metric-pill">2年修完4年学分</span></div></li></ul>
+            </div>
+            
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">项目补充</h2>
+      <div class="grid grid-2">
+            <div class="project-card">
+              <div class="project-date">1989.03 - 1990.12</div>
+              <h3 class="project-title">校园软件商业化实战（BITLOK）</h3>
+              <ul class="project-highlights"><li><strong>项目落地：</strong>将技术项目推进到可收费产品形态，验证需求到交易的闭环路径</li><li><strong>项目落地：</strong>在有限资源下持续迭代并保持长期销售能力</li></ul>
+            </div>
+            </div>
+    </div>
+  </section>
+
+  <section class="skills-section">
+    <div class="container">
+      <h2 class="section-title">技能与工具</h2>
+      <div class="skills-grid">
+            <div class="skill-category">
+              <div class="category-title">技术基础</div>
+              <div class="skill-tags"><span class="skill-tag">C语言</span><span class="skill-tag">基础汇编</span><span class="skill-tag">早期PC软件开发流程</span></div>
+            </div>
+            
+            <div class="skill-category">
+              <div class="category-title">运营能力</div>
+              <div class="skill-tags"><span class="skill-tag">需求洞察</span><span class="skill-tag">项目推进</span><span class="skill-tag">复盘改进</span><span class="skill-tag">商业化思维</span></div>
+            </div>
+            
+            <div class="skill-category">
+              <div class="category-title">个人特质</div>
+              <div class="skill-tags"><span class="skill-tag">强执行力</span><span class="skill-tag">抗压推进</span><span class="skill-tag">结果导向</span></div>
+            </div>
+            </div>
+    </div>
+  </section>
+
+  <div class="footer-note">说明：本页面为教学演示版，投递前请人工校验事实、量化数据与时间线一致性。</div>
+</body>
+</html>
