@@ -47,6 +47,9 @@
                 <a href=mailto:2359618694@qq.com title=邮件>
                     <svg xmlns:xmlns=http://www.w3.org/2000/svg fill=currentColor viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 4-8 5-8-5V6l8 5 8-5Z"/></svg>
                 </a>
+                <a href=# class=wechat-copy data-wechat=YeurekaL title="微信（点击复制）" aria-label=复制微信号 style=color:#07C160>
+                    <svg xmlns:xmlns=http://www.w3.org/2000/svg fill=currentColor viewBox="0 0 24 24"><path d="M8.2 3C4.22 3 1 5.56 1 8.72c0 1.75 1.02 3.32 2.63 4.37L3 15.8l2.7-1.35c.5.1 1.02.15 1.56.15 3.98 0 7.2-2.56 7.2-5.72S12.18 3 8.2 3zm-2.1 6.3c-.48 0-.86-.39-.86-.86 0-.48.38-.86.86-.86.47 0 .86.38.86.86 0 .47-.39.86-.86.86zm4.2 0c-.47 0-.86-.39-.86-.86 0-.48.39-.86.86-.86.48 0 .86.38.86.86 0 .47-.38.86-.86.86zM16.6 9.2c-3.53 0-6.4 2.26-6.4 5.06 0 2.8 2.87 5.06 6.4 5.06.46 0 .9-.04 1.33-.13L21 20.8l-.62-2.15A4.76 4.76 0 0 0 23 14.26c0-2.8-2.87-5.06-6.4-5.06zm-1.86 5.66a.76.76 0 1 1 0-1.52.76.76 0 0 1 0 1.52zm3.72 0a.76.76 0 1 1 0-1.52.76.76 0 0 1 0 1.52z"/></svg>
+                </a>
             </div>
 
             <a href=#about class="load-hidden scroll-indicator">↓</a>
@@ -356,6 +359,7 @@
 
     
     <script>document.querySelectorAll(".load-hidden").forEach(function(el){el.classList.remove("load-hidden")});</script>
+    <script>document.querySelectorAll(".wechat-copy").forEach(function(btn){btn.addEventListener("click",async function(ev){ev.preventDefault();var id=btn.getAttribute("data-wechat")||"YeurekaL";try{if(navigator.clipboard&&window.isSecureContext)await navigator.clipboard.writeText(id);else{var input=document.createElement("input");input.value=id,document.body.appendChild(input),input.select(),document.execCommand("copy"),document.body.removeChild(input)}alert("微信号已复制："+id+"\\n你可以去微信添加我。")}catch(err){alert("请手动复制微信号："+id)}})});</script>
     <script type=module src=index-zh.808cd7a4.js></script>
 
     
